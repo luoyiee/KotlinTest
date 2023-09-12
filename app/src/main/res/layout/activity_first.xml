@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        android:text="TestToast" />
+
+    <Button
+        android:id="@+id/button_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="15dp"
+        android:textAllCaps="false"
+        android:text="TestFinish" />
+
+    <Button
+        android:id="@+id/button_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="15dp"
+        android:textAllCaps="false"
+        android:text="TestIntent" />
+
+    <Button
+        android:id="@+id/button_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="15dp"
+        android:text="TestWeb" />
+
+    <Button
+        android:id="@+id/button_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="15dp"
+        android:text="TestCall" />
+
+    <Button
+        android:id="@+id/button_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="15dp"
+        android:text="TestExtra" />
+
+</LinearLayout>

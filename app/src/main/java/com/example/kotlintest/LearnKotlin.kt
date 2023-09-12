@@ -11,10 +11,10 @@ import java.lang.Integer.max
 
  * 修饰符        Java                              Kotlin
  * public    所有类可见                           所有类可见（默认）
-   private   当前类可见                          当前类可见
-  protected  当前类、子类、同一包路径下的类可见       当前类、子类可见
-  default   同一包路径下的类可见（默认）             无
-  internal   无                                 同一模块中的类可见
+private   当前类可见                          当前类可见
+protected  当前类、子类、同一包路径下的类可见       当前类、子类可见
+default   同一包路径下的类可见（默认）             无
+internal   无                                 同一模块中的类可见
  */
 class LearnKotlin
 
@@ -35,6 +35,7 @@ fun main() {
 //    val student2 = Student("Jack", 19)
 //    val student3 = Student("a123", 5, "Jack", 19)
     doStudy(student)
+    doStudyNull(null)
 
     val cellphone1 = Cellphone("Samsung", 1299.99)
     val cellphone2 = Cellphone("Samsung", 1299.99)
@@ -142,7 +143,6 @@ fun checkNumber(num: Number) = when (num) {
 /**
  * 循环语句
  * in 左右闭合 until 左闭右开 step 跳过元素 downTo 降序
- *
  */
 fun rangeIn() {
     for (i in 0..5) {
@@ -163,9 +163,22 @@ fun rangeDownTo() {
     }
 }
 
+/**
+ * ?就表示可为空
+ */
 fun doStudy(study: Study) {
     study.watchTv()
     study.readBook()
+}
+
+fun doStudyNull(study: Study?) {
+// != null替换为?
+//        if (study != null) {
+//        study.watchTv()
+//        study.readBook()
+//    }
+    study?.watchTv()
+    study?.readBook()
 }
 
 
