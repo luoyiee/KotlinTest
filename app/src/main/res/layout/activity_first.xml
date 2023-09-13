@@ -3,58 +3,100 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_toast"
-        android:layout_width="wrap_content"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="15dp"
-        android:layout_gravity="center_horizontal"
-        android:textAllCaps="false"
-        android:text="TestToast" />
+        android:scrollbars="none">
 
-    <Button
-        android:id="@+id/button_finish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="15dp"
-        android:textAllCaps="false"
-        android:text="TestFinish" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_intent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="15dp"
-        android:textAllCaps="false"
-        android:text="TestIntent" />
+            <Button
+                android:id="@+id/btn_toast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test toast"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/button_web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="15dp"
-        android:text="TestWeb" />
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test finish"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/button_call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="15dp"
-        android:text="TestCall" />
+            <Button
+                android:id="@+id/btn_intent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test intent"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/button_extra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="15dp"
-        android:text="TestExtra" />
+            <Button
+                android:id="@+id/btn_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test web"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test call"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test extra"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/btn_life_cycle_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test activity life cycle"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_life_cycle_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test dialog life cycle"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_launch_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Test launchMode"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
 
 </LinearLayout>
