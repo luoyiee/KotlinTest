@@ -26,7 +26,8 @@ fun main() {
 //    testUppercase()
 //    testFilter()
 //    testAll()
-    testJavaApi()
+//    testJavaApi()
+    testWith()
 }
 
 fun testList() {
@@ -43,6 +44,69 @@ fun testListAdd() {
     for (fruit in list) {
         println(fruit)
     }
+}
+
+/**
+ * with函数
+ * val result = with(obj){"value"}
+ */
+fun testAppend() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape")
+    val builder = StringBuilder()
+    builder.append("Start eat fruits").append("\n")
+    for (fruit in list) {
+        builder.append(fruit).append("\n")
+    }
+    builder.append("ate all fruits")
+    println(builder.toString())
+}
+
+fun testWith() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape")
+    val result = with(StringBuilder()) {
+        append("Start eat fruits").append("\n")
+        for (fruit in list) {
+            append(fruit).append("\n")
+        }
+        append("ate all fruits")
+        toString()
+    }
+    println(result)
+}
+
+/**
+ * run函数
+ * val result = obj.run("value")
+ */
+fun testRun() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape")
+    val result = StringBuilder().run {
+        append("Start eat fruits").append("\n")
+        for (fruit in list) {
+            append(fruit).append("\n")
+        }
+        append("ate all fruits")
+        toString()
+    }
+    println(result)
+}
+
+/**
+ * apply函数
+ * val result = obj.apply("value")
+ * 只返回同类型
+ */
+fun testApply() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape")
+    val result = StringBuilder().apply {
+        append("Start eat fruits").append("\n")
+        for (fruit in list) {
+            append(fruit).append("\n")
+        }
+        append("ate all fruits")
+//        toString()
+    }
+    println(result.toString())
 }
 
 /**

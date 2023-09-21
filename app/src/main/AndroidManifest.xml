@@ -13,9 +13,18 @@
         android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
         <activity
-            android:name=".ui.DialogActivity"
-            android:theme="@style/Theme.AppCompat.Dialog"
+            android:name=".ui.ListViewActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.UiLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UiControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DialogActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Dialog" />
         <activity
             android:name=".ui.NormalActivity"
             android:exported="false" />
@@ -34,7 +43,8 @@
         <!-- android:exported="false" /> -->
         <activity
             android:name=".ui.SecondActivity"
-            android:exported="false">
+            android:exported="false"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="com.example.kotlintest.ACTION_START" />
 
@@ -43,10 +53,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.FirstActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
-            android:launchMode="singleTop"
             android:label="@string/app_name"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

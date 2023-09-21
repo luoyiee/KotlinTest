@@ -8,22 +8,22 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlintest.R
-import com.example.kotlintest.databinding.ActivityFirstBinding
+import com.example.kotlintest.databinding.ActivityMainBinding
 
-class FirstActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var mBinding: ActivityFirstBinding
+class MainActivity : BaseActivity(), View.OnClickListener {
+    private lateinit var mBinding: ActivityMainBinding
     private val tag = javaClass.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("MainActivity", "Task id is $taskId")
         if (savedInstanceState != null) {
             val tempData = savedInstanceState.getString("data_key")
             Log.d(tag, "tempData is $tempData")
         }
         Log.d(tag, "onCreate")
-        mBinding = ActivityFirstBinding.inflate(layoutInflater)
+        mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         mBinding.btnToast.setOnClickListener(this)
         mBinding.btnFinish.setOnClickListener(this)
@@ -34,6 +34,7 @@ class FirstActivity : AppCompatActivity(), View.OnClickListener {
         mBinding.btnLifeCycleActivity.setOnClickListener(this)
         mBinding.btnLifeCycleDialog.setOnClickListener(this)
         mBinding.btnLaunchMode.setOnClickListener(this)
+        mBinding.btnUi.setOnClickListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -54,6 +55,7 @@ class FirstActivity : AppCompatActivity(), View.OnClickListener {
         when (v) {
             mBinding.btnToast -> Toast.makeText(this, "You clicked Button 1", Toast.LENGTH_SHORT)
                 .show()
+
             mBinding.btnFinish -> finish()
             mBinding.btnIntent -> {
                 //SecondActivity::class.java的写法就相当于Java 中SecondActivity.class
@@ -61,9 +63,10 @@ class FirstActivity : AppCompatActivity(), View.OnClickListener {
 //                val intent = Intent(this, SecondActivity::class.java)
 //                startActivity(intent)
                 //隐式Intent
-                val intent = Intent("com.example.kotlintest.ACTION_START")
-                intent.addCategory("com.example.kotlintest.MY_CATEGORY")
-                startActivity(intent)
+//                val intent = Intent("com.example.kotlintest.ACTION_START")
+//                intent.addCategory("com.example.kotlintest.MY_CATEGORY")
+//                startActivity(intent)
+                SecondActivity.actionStart(this, "param1", "param2")
             }
 
             mBinding.btnWeb -> {
@@ -73,6 +76,7 @@ class FirstActivity : AppCompatActivity(), View.OnClickListener {
                 //android:path。用于指定主机名和端口之后的部分，如一段网址中跟在域名之后的内容。
                 //android:mimeType。用于指定可以处理的数据类型，允许使用通配符的方式进行指定。
 //                val intent = Intent(Intent.ACTION_VIEW)
+
                 val intent = Intent()//需要指定action为空，不然无法跳转
                 intent.data = Uri.parse("https://www.baidu.com")
                 startActivity(intent)
@@ -96,17 +100,25 @@ class FirstActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, NormalActivity::class.java)
                 startActivity(intent)
             }
+
             mBinding.btnLifeCycleDialog -> {
                 val intent = Intent(this, DialogActivity::class.java)
                 startActivity(intent)
             }
-            mBinding.btnLaunchMode-> {
+
+            mBinding.btnLaunchMode -> {
                 //启动模式
-                // standard每点一次新建一个实例  singleTop复用栈顶
+                // standard一次新建一个实例
+                // singleTop栈顶复用，不在栈顶会新建
+                // singleTask栈内复用，只创建一个实例
 //                val intent = Intent(this, FirstActivity::class.java)
 //                startActivity(intent)
-
                 val intent = Intent(this, SecondActivity::class.java)
+                startActivity(intent)
+            }
+
+            mBinding.btnUi -> {
+                val intent = Intent(this, UiControlActivity::class.java)
                 startActivity(intent)
             }
         }

@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textColor="#00ff00"
+      android:textSize="24sp"
+      android:text="This is TextView"/>
+
+  <EditText
+      android:id="@+id/editText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Type something here"
+      android:maxLines="2"
+      />
+
+  <Button
+      android:id="@+id/test_et"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test EditText" />
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/avatar_1"
+      />
+
+  <Button
+      android:id="@+id/test_iv"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test ImageView" />
+
+  <ProgressBar
+      android:id="@+id/progressBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:progress="15"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:max="100"
+      />
+
+  <Button
+      android:id="@+id/test_visibility"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test Visibility" />
+
+  <Button
+      android:id="@+id/test_progressbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test ProgressBar" />
+
+  <Button
+      android:id="@+id/test_dialog"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test Dialog" />
+
+  <Button
+      android:id="@+id/test_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test Layout" />
+
+  <Button
+      android:id="@+id/test_list_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test ListView" />
+
+  <Button
+      android:id="@+id/test_recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test RecyclerView" />
+</LinearLayout>

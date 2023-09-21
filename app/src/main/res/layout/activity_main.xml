@@ -95,6 +95,15 @@
                 android:text="Test launchMode"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_ui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="5dp"
+                android:text="Study UI"
+                android:textAllCaps="false" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
