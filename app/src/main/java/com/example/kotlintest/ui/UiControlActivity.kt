@@ -23,6 +23,7 @@ class UiControlActivity : AppCompatActivity(), View.OnClickListener {
         mBinding.testLayout.setOnClickListener(this)
         mBinding.testListView.setOnClickListener(this)
         mBinding.testRecyclerView.setOnClickListener(this)
+        mBinding.testUiBest.setOnClickListener(this)
 //        mBinding.button.setOnClickListener {
 //            // 在此处添加逻辑
 //        }
@@ -68,12 +69,19 @@ class UiControlActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this, UiLayoutActivity::class.java)
                 startActivity(intent)
             }
+
             R.id.test_list_view -> {
                 val intent = Intent(this, ListViewActivity::class.java)
                 startActivity(intent)
             }
+
             R.id.test_recycler_view -> {
-                val intent = Intent(this, UiLayoutActivity::class.java)
+                val intent = Intent(this, RecyclerViewActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.test_ui_best -> {
+                val intent = Intent(this, UiBestActivity::class.java)
                 startActivity(intent)
             }
         }

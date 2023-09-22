@@ -91,4 +91,11 @@
       android:layout_height="wrap_content"
       android:textAllCaps="false"
       android:text="Test RecyclerView" />
+
+  <Button
+      android:id="@+id/test_ui_best"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAllCaps="false"
+      android:text="Test UI Best" />
 </LinearLayout>

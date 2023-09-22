@@ -3,7 +3,6 @@ package com.example.kotlintest
 class Student(val sno: String, val grade: Int, name: String, age: Int) :
     Person(name, age) ,Study{
 
-
     /**
      * 次构造函数是通过constructor关键字来定义的
      */
