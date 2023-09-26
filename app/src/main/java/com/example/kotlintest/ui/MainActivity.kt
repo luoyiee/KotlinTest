@@ -10,6 +10,9 @@ import android.view.View
 import android.widget.Toast
 import com.example.kotlintest.R
 import com.example.kotlintest.databinding.ActivityMainBinding
+import com.example.kotlintest.ui.part3_Activity.DialogActivity
+import com.example.kotlintest.ui.part3_Activity.SecondActivity
+import com.example.kotlintest.ui.part4_UI.UiControlActivity
 
 class MainActivity : BaseActivity(), View.OnClickListener {
     private lateinit var mBinding: ActivityMainBinding
@@ -58,7 +61,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
             mBinding.btnFinish -> finish()
             mBinding.btnIntent -> {
-                //SecondActivity::class.java的写法就相当于Java 中SecondActivity.class
+                //SecondActivity::class.java的写法就相当于Java中SecondActivity.class
                 //显式Intent
 //                val intent = Intent(this, SecondActivity::class.java)
 //                startActivity(intent)

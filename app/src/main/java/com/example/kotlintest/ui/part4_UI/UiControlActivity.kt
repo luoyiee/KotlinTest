@@ -1,4 +1,4 @@
-package com.example.kotlintest.ui
+package com.example.kotlintest.ui.part4_UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

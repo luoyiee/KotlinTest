@@ -1,10 +1,9 @@
-package com.example.kotlintest.ui
+package com.example.kotlintest.ui.part4_UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.kotlintest.R
 import com.example.kotlintest.adapter.MsgAdapter
 import com.example.kotlintest.databinding.ActivityUiBestBinding
 import com.example.kotlintest.model.Msg

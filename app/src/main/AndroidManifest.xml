@@ -13,29 +13,29 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".ui.UiBestActivity"
+            android:name=".ui.part4_UI.UiBestActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.RecyclerViewActivity"
+            android:name=".ui.part4_UI.RecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ListViewActivity"
+            android:name=".ui.part4_UI.ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.UiLayoutActivity"
+            android:name=".ui.part4_UI.UiLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.UiControlActivity"
+            android:name=".ui.part4_UI.UiControlActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DialogActivity"
+            android:name=".ui.part3_Activity.DialogActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity
             android:name=".ui.NormalActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ThirdActivity"
+            android:name=".ui.part3_Activity.ThirdActivity"
             android:exported="true">
             <intent-filter tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
@@ -48,7 +48,7 @@
         <!-- android:name=".ui.SecondActivity" -->
         <!-- android:exported="false" /> -->
         <activity
-            android:name=".ui.SecondActivity"
+            android:name=".ui.part3_Activity.SecondActivity"
             android:exported="false"
             android:launchMode="singleInstance">
             <intent-filter>

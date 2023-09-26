@@ -1,9 +1,9 @@
-package com.example.kotlintest.ui
+package com.example.kotlintest.ui.part3_Activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.example.kotlintest.databinding.ActivityThirdBinding
+import com.example.kotlintest.ui.BaseActivity
 import com.example.kotlintest.util.ActivityCollector
 
 class ThirdActivity : BaseActivity() {

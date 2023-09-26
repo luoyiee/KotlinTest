@@ -1,4 +1,4 @@
-package com.example.kotlintest.ui
+package com.example.kotlintest.ui.part4_UI
 
 import android.os.Bundle
 import android.widget.ArrayAdapter

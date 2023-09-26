@@ -1,4 +1,4 @@
-package com.example.kotlintest.ui
+package com.example.kotlintest.ui.part3_Activity
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import com.example.kotlintest.databinding.ActivitySecondBinding
+import com.example.kotlintest.ui.BaseActivity
 
 class SecondActivity : BaseActivity() {
 
