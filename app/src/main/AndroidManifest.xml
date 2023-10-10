@@ -13,6 +13,18 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".ui.part5_Fragment.FragmentBestPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.part5_Fragment.FragmentQualifierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.part5_Fragment.FragmentManageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.part5_Fragment.FragmentTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.part4_UI.UiBestActivity"
             android:exported="false" />
         <activity

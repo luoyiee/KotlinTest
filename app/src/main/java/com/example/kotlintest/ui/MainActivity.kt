@@ -13,6 +13,8 @@ import com.example.kotlintest.databinding.ActivityMainBinding
 import com.example.kotlintest.ui.part3_Activity.DialogActivity
 import com.example.kotlintest.ui.part3_Activity.SecondActivity
 import com.example.kotlintest.ui.part4_UI.UiControlActivity
+import com.example.kotlintest.ui.part5_Fragment.FragmentManageActivity
+import com.example.kotlintest.ui.part5_Fragment.FragmentTestActivity
 
 class MainActivity : BaseActivity(), View.OnClickListener {
     private lateinit var mBinding: ActivityMainBinding
@@ -38,6 +40,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         mBinding.btnLifeCycleDialog.setOnClickListener(this)
         mBinding.btnLaunchMode.setOnClickListener(this)
         mBinding.btnUi.setOnClickListener(this)
+        mBinding.btnFragment.setOnClickListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -123,6 +126,10 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             mBinding.btnUi -> {
                 val intent = Intent(this, UiControlActivity::class.java)
                 startActivity(intent)
+            }
+
+            mBinding.btnFragment -> {
+                startActivity(Intent(this, FragmentManageActivity::class.java))
             }
         }
     }
