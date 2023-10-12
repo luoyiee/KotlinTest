@@ -15,6 +15,7 @@ import com.example.kotlintest.ui.part3_Activity.SecondActivity
 import com.example.kotlintest.ui.part4_UI.UiControlActivity
 import com.example.kotlintest.ui.part5_Fragment.FragmentManageActivity
 import com.example.kotlintest.ui.part5_Fragment.FragmentTestActivity
+import com.example.kotlintest.ui.part6_Broadcast.BroadcastActivity
 
 class MainActivity : BaseActivity(), View.OnClickListener {
     private lateinit var mBinding: ActivityMainBinding
@@ -41,6 +42,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         mBinding.btnLaunchMode.setOnClickListener(this)
         mBinding.btnUi.setOnClickListener(this)
         mBinding.btnFragment.setOnClickListener(this)
+        mBinding.btnBroadcast.setOnClickListener(this)
+        mBinding.btnForceOffline.setOnClickListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -130,6 +133,15 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
             mBinding.btnFragment -> {
                 startActivity(Intent(this, FragmentManageActivity::class.java))
+            }
+
+            mBinding.btnBroadcast -> {
+                startActivity(Intent(this, BroadcastActivity::class.java))
+            }
+
+            mBinding.btnForceOffline -> {
+                val intent = Intent("com.example.broadcastbestpractice.FORCE_OFFLINE")
+                sendBroadcast(intent)
             }
         }
     }

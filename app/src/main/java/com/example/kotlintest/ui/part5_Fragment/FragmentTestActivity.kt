@@ -14,10 +14,10 @@ class FragmentTestActivity : AppCompatActivity() {
         mBinding = ActivityFragmentTestBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         //  https://blog.csdn.net/Annie_0321/article/details/131780763
-        val button: Button = findViewById(R.id.left_button)
-        button.setOnClickListener {
-            replaceFragment(AnotherRightFragment())
-        }
+//        val button: Button = findViewById(R.id.left_button)
+//        button.setOnClickListener {
+//            replaceFragment(AnotherRightFragment())
+//        }
 //        replaceFragment(RightFragment())
 //Fragment 和Activity 之间的交互
 //        val fragment = supportFragmentManager.findFragmentById(R.id.leftFrag) as LeftFragment
@@ -30,11 +30,11 @@ class FragmentTestActivity : AppCompatActivity() {
 //        transaction.replace(R.id.rightLayout, fragment)
 //        transaction.commit()
 //    }
-    private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.rightLayout, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
+//    private fun replaceFragment(fragment: Fragment) {
+//        val fragmentManager = supportFragmentManager
+//        val transaction = fragmentManager.beginTransaction()
+//        transaction.replace(R.id.rightLayout, fragment)
+//        transaction.addToBackStack(null)
+//        transaction.commit()
+//    }
 }

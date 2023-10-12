@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,11 +14,42 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
+        <!-- 系统启动完成后会发出一条值为android.intent.action.BOOT_COMPLETED的广播 -->
+        <!-- 目前接收不到 -->
+        <!-- <receiver -->
+        <!-- android:name=".util.BootCompleteReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- 标准广播 -->
+        <receiver
+            android:name=".util.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".util.AnotherBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
         <activity
-            android:name=".ui.part5_Fragment.FragmentBestPActivity"
+            android:name=".ui.part6_Broadcast.BroadcastActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.part5_Fragment.FragmentQualifierActivity"
+            android:name=".ui.part5_Fragment.NewsContentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.part5_Fragment.FragmentBestPActivity"
             android:exported="false" />
         <activity
             android:name=".ui.part5_Fragment.FragmentManageActivity"
@@ -75,9 +108,18 @@
             android:exported="true"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".ui.part6_Broadcast.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
