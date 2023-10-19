@@ -1,6 +1,7 @@
 package com.example.kotlintest.ui.part6_Broadcast
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -14,6 +15,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        mBinding.accountEdit.setText("admin")
+        mBinding.passwordEdit.setText("123456")
         mBinding.login.setOnClickListener {
             val account = mBinding.accountEdit.text.toString()
             val password = mBinding.passwordEdit.text.toString()

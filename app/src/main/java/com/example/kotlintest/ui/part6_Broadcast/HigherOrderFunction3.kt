@@ -1,12 +1,14 @@
 package com.example.kotlintest.ui.part6_Broadcast
 
-
+/**
+ * 内联函数
+ * noinline取消内联
+ * (String, Int) -> Unit
+ * 可使用return
+ */
 fun main() {
     val num1 = 100
     val num2 = 80
-    val result1 = num1AndNum2(num1, num2) { n1, n2 ->
-        n1 + n2
-    }
 //    val result2 = num1AndNum2(num1, num2) { n1, n2 ->
 //        n1 - n2
 //    }
