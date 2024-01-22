@@ -7,6 +7,7 @@ package com.example.kotlintest.ui.part6_Broadcast
  * (String, Int) -> Unit
  * 可使用return
  * 高阶函数实现原理。你会发现，原来我们一直使用的Lambda表达式在底层被转换成了匿名类的实现方式。这就表明，我们每调用一次Lambda表达式，都会创建一个新的匿名类实例，当然也会造成额外的内存和性能开销。
+ * 内联函数所引用的Lambda 表达式中是可以使用return关键字来进行函数返回的，而非内联函数只能进行局部返回
  */
 
 inline fun num1AndNum2(num1: Int, num2: Int, operation: (Int, Int) -> Int): Int {
@@ -14,12 +15,24 @@ inline fun num1AndNum2(num1: Int, num2: Int, operation: (Int, Int) -> Int): Int 
     return result
 }
 
+//fun main() {
+//    val num1 = 100
+//    val num2 = 80
+//    val result = num1AndNum2(num1, num2) { n1, n2 ->
+//        n1 + n2
+//    }
+//}
+
+inline fun num1AndNum2(num1: Int, num2: Int): Int {
+    val result = num1 + num2;
+    return result
+}
+
 fun main() {
     val num1 = 100
     val num2 = 80
-    val result = num1AndNum2(num1, num2) { n1, n2 ->
-        n1 + n2
-    }
+//    val result = num1AndNum2(num1, num2)
+    val result = num1 + num2;
 }
 
 //public static int num1AndNum2(int num1, int num2, Function operation) {
