@@ -166,6 +166,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     override fun onStart() {
         super.onStart()
         Log.d(tag, "onStart")
+
     }
 
     override fun onResume() {
