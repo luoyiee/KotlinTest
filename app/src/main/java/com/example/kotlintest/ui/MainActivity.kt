@@ -88,6 +88,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
                 val intent = Intent()//需要指定action为空，不然无法跳转
                 intent.data = Uri.parse("https://www.baidu.com")
+
                 startActivity(intent)
             }
 
