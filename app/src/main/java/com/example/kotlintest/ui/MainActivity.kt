@@ -106,6 +106,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             }
 
             mBinding.btnLifeCycleActivity -> {
+
                 val intent = Intent(this, NormalActivity::class.java)
                 startActivity(intent)
             }
